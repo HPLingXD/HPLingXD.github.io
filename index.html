@@ -1,2 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive E-Commerce Store</title>
+</head>
+<body style="background-image: url('https://i.pinimg.com/736x/59/4d/f5/594df566adb388e5012c9637a09e6a90.jpg');">
+    <!-- Your page content goes here -->
+</body>
+    <style>
+    
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .header {
+            background-color: #8aa0ac;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            width: calc(25% - 40px);
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+        }
+        .product img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        .cart {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .checkout {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #8aa0ac;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #8aa0ac;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Flowers for you</h1>
+        <h4>You can buy yourself flowers!</h4>
+        
+    </div>
+    <div class="container">
+        <div class="product" onclick="playClickSound()">
+            <img src="https://www.flowerchimp.sg/cdn/shop/products/4_1_e5600062-9726-4eee-9245-b4ed0741a29a_1946x.jpg?v=1681869353" alt="Product 1">
+            <h3>Self-love red rose bouquet</h3>
+            <p>$39.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product" onclick="playClickSound()">
+            <img src="https://www.jmfloral.sg/cdn/shop/products/Helia_800x.png?v=1669371481" alt="Product 2">
+            <h3>Bright sunflower bouquet</h3>
+            <p>$18.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product" onclick="playClickSound()">
+            <img src="https://www.flowerchimp.com/cdn/shop/products/8_1600x.jpg?v=1682560386" alt="Product 3">
+            <h3>Pastel pink bouquet</h3>
+            <p>$25.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <h5>
+              
+                    <font color = "red">
+                        Please add to cart
+                        </font>
+          
 
-<p>hellow</p>
+            </h5>
+             
+            <h3>Total: $0</h3>
+            <div class="checkout">
+                <button class="btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function playClickSound() {
+            var audio = document.getElementById('clickSound');
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+
+
